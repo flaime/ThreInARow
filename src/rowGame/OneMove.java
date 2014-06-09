@@ -2,7 +2,19 @@ package rowGame;
 
 public class OneMove {
 
-	public OneMove(int y, int x, TextPlayer textPlayer) {
-		// TODO Auto-generated constructor stub
+	private int x;
+	private int y;
+	private Player pl;
+	
+	public OneMove(int y, int x, Player pl) {
+		this.pl = pl;
+	}
+	
+	public int getX(){
+		return x;
+	}
+	
+	public int getY(){
+		return y;
 	}
 }
