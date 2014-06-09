@@ -11,17 +11,18 @@ public class MainClass {
 		EndGame();
 	}
 
-	private void EndGame() {
+
+	private void StartGame() {
 		// TODO Auto-generated method stub
 		
 	}
-
+	
 	private void StartLope() {
 		// TODO Auto-generated method stub
 		
 	}
-
-	private void StartGame() {
+	
+	private void EndGame() {
 		// TODO Auto-generated method stub
 		
 	}
