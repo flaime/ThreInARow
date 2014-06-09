@@ -17,4 +17,8 @@ public class OneMove {
 	public int getY(){
 		return y;
 	}
+
+	public Player getPlayer() {
+		return pl;
+	}
 }
