@@ -1,6 +1,6 @@
 package rowGame;
 
-public class Player {
+public abstract class Player {
 
 	GamePlan gp;
 	String name = "";
@@ -21,5 +21,14 @@ public class Player {
 			teken = "P" + numberOfPlayers;
 		numberOfPlayers++;
 	}
-
+	
+	public String toString(){
+		return teken; //var namn förut
+	}
+	
+	public String getTecken(){
+		return teken;
+	}
+	
+	public abstract OneMove makeMove();
 }
