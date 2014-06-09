@@ -7,6 +7,8 @@ public class MainClass {
 	ArrayList<Player> player = new ArrayList<>();
 	
 	GamePlan gp;
+	
+	Graphics gr;
 
 	public MainClass() {
 		
