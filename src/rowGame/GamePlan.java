@@ -1,9 +1,11 @@
 package rowGame;
 
+import java.util.ArrayList;
+
 public class GamePlan {
 	//lista för att komma ihåg senaste dragen
-	//ArrayList<EttDrag> dragen = new ArrayList<>();
-	//Spelare [][] spelplan;
+	ArrayList<OneMove> moves = new ArrayList<>();
+	Player [][] gamePlan;
 
 	/*
 	 * [0,0][0,1][0,2]
@@ -27,7 +29,14 @@ public class GamePlan {
 	public int getHeight() {
 		return height;
 	}
+
+	public Player getPosition(int x, int y) {
+		return gamePlan[x][y];
+	}
 	
+	public void setPosition(OneMove om) {
+		gamePlan[om.getX()][om.getY()] = om.getPlayer();
+	}
 	
 
 }
