@@ -20,6 +20,13 @@ public class GamePlan {
 		this.height = height;
 	}
 
+	public int getWhite() {
+		return width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
 	
 	
 
