@@ -33,11 +33,11 @@ public class MainClass {
 		Scanner s = new Scanner(System.in);
 		
 		while(true){
-			//en lopp för att få spelet att rulla på
+			//a lop to get the game going
 			
-			//lägg till kontroll för att det inte ska gå att lägga på redan lagd ruta
+			//add controll to not be abel to la on a alreday layd plase
 			
-			System.out.println("hej3");
+			gp.setPosition(om);
 			spelplanen.setDrag(spelaNuvarandeSpelare());
 			//lop för att lopa igeon alla osm 
 			nästaSpelaresTur();
@@ -53,6 +53,11 @@ public class MainClass {
 				System.out.println(tittaEfterVinst() + "har vunnit");
 			}
 		}
+		
+	}
+	
+	int playerTurn  = 0;
+	private OneMove PlayPlayer(){
 		
 	}
 	
