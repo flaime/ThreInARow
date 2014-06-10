@@ -24,7 +24,7 @@ public class TextGraphics extends Graphics {
 				print = print + "[";
 				
 				if (gp.getPosition(i, j) != null)
-					print = print + sp.getPlatts(j, i).getTecken();//.toString();//x:y
+					print = print + gp.getPosition(i, j).toString();//.toString();//x:y
 				else{
 					if(helpCoordinates == false)
 						print = print + " ";
