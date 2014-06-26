@@ -54,6 +54,7 @@ public class MainClass {
 			if(lookForProfit() != null){
 				//do somthing
 				//System.out.println(tittaEfterVinst() + "har vunnit");
+				break;
 			}
 		}
 		
