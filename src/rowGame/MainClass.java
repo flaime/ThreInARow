@@ -57,11 +57,13 @@ public class MainClass {
 	
 	int playerTurn  = 0;
 	private OneMove PlayPlayer(){
-		
+		return null;
+		//do somthing her
 	}
 	
 	private Player lookForProfit(){
-		
+		return null;
+		//do somthing her
 	}
 	
 	private void EndGame() {
