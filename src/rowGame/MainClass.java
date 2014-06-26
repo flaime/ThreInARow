@@ -42,6 +42,7 @@ public class MainClass {
 			//add controll to not be abel to la on a alreday layd plase
 			
 			gp.setPosition(PlayPlayer());
+			
 			//Do somting to be shor it vill go throt ewrey playewr
 			//and do somting if the players mov isent is ok
 			
@@ -56,6 +57,7 @@ public class MainClass {
 				//System.out.println(tittaEfterVinst() + "har vunnit");
 				break;
 			}
+			System.out.println("Del steg");
 		}
 		
 	}
