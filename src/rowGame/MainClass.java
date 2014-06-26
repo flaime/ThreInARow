@@ -37,20 +37,19 @@ public class MainClass {
 			
 			//add controll to not be abel to la on a alreday layd plase
 			
-			gp.setPosition(om);
-			spelplanen.setDrag(spelaNuvarandeSpelare());
-			//lop för att lopa igeon alla osm 
-			nästaSpelaresTur();
+			gp.setPosition(PlayPlayer());
+			//Do somting to be shor it vill go throt ewrey playewr
+			//and do somting if the players mov isent is ok
 			
-			//tänk på att uppdatera grafik om det finns någon
-			if(textGrafik == true){
-				tg.skrivUt();
-			}
+			//Uppdatete grapichs
+//			if(textGrafik == true){
+//				tg.skrivUt();
+//			}
 			
-			//tita efter vinst
-			if(tittaEfterVinst() != null){
-				tg.vinst(tittaEfterVinst());
-				System.out.println(tittaEfterVinst() + "har vunnit");
+			//Lock for vinst
+			if(lookForProfit() != null){
+				//do somthing
+				//System.out.println(tittaEfterVinst() + "har vunnit");
 			}
 		}
 		
@@ -58,6 +57,10 @@ public class MainClass {
 	
 	int playerTurn  = 0;
 	private OneMove PlayPlayer(){
+		
+	}
+	
+	private Player lookForProfit(){
 		
 	}
 	
