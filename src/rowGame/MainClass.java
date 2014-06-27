@@ -62,10 +62,12 @@ public class MainClass {
 		
 	}
 	
-	int playerTurn  = 0;
+	int playerTurn  = -1;
 	private OneMove PlayPlayer(){
-		return null;
-		//do somthing her
+		playerTurn++;
+		if((playerTurn) == player.size())
+			playerTurn = 0;
+		return player.get(playerTurn + 1).makeMove();
 	}
 	
 	private Player lookForProfit(){
