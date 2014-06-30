@@ -20,6 +20,7 @@ public class GamePlan {
 	public GamePlan(int height, int width) {
 		this.width = width;
 		this.height = height;
+		gamePlan = new Player[width][height];
 	}
 
 	public int getWhite() {
@@ -35,7 +36,11 @@ public class GamePlan {
 	}
 	
 	public void setPosition(OneMove om) {
-		gamePlan[om.getX()][om.getY()] = om.getPlayer();
+		int x = om.getX();
+		int y = om.getY();
+		Player p = om.getPlayer();
+		
+		gamePlan[x][y] = p;
 	}
 	
 
