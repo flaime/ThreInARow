@@ -14,22 +14,15 @@ public class MainClass {
 	public MainClass() {
 		
 		StartGame();
-		System.out.println("steg 1");
 		StartLope();
-		System.out.println("steg 2");
 		EndGame();
-		System.out.println("steg 3");
 	}
 
 
 	private void StartGame() {
 		gp = new GamePlan(3, 3);
-		System.out.println("Del steg 1");
 		player.add(new TextPlayer("palyer 1", gp));
-		System.out.println("Del steg 2");
-		player.add(new TextPlayer("palyer 2", gp));
-		System.out.println("Del steg 3");
-		
+		player.add(new TextPlayer("palyer 2", gp));		
 	}
 	
 	private void StartLope() {
@@ -57,7 +50,6 @@ public class MainClass {
 				//System.out.println(tittaEfterVinst() + "har vunnit");
 				break;
 			}
-			System.out.println("Del steg");
 		}
 		
 	}
