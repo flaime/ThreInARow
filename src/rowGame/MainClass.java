@@ -23,6 +23,7 @@ public class MainClass {
 		gp = new GamePlan(3, 3);
 		player.add(new TextPlayer("palyer 1", gp));
 		player.add(new TextPlayer("palyer 2", gp));		
+		gr = new TextGraphics(gp);
 	}
 	
 	private void StartLope() {
@@ -40,9 +41,9 @@ public class MainClass {
 			//and do somting if the players mov isent is ok
 			
 			//Uppdatete grapichs
-//			if(textGrafik == true){
-//				tg.skrivUt();
-//			}
+			if(gr != null){
+				gr.updateGraphics();
+			}
 			
 			//Lock for vinst
 			if(lookForProfit() != null){
