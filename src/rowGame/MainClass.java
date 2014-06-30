@@ -39,10 +39,10 @@ public class MainClass {
 		while(true){
 			//a lop to get the game going
 			
-			//add controll to not be abel to la on a alreday layd plase
+			//add controll to not be abel to lay on a alredy layd plase
 			
 			gp.setPosition(PlayPlayer());
-			
+				
 			//Do somting to be shor it vill go throt ewrey playewr
 			//and do somting if the players mov isent is ok
 			
@@ -53,7 +53,7 @@ public class MainClass {
 			
 			//Lock for vinst
 			if(lookForProfit() != null){
-				//do somthing
+				//do something
 				//System.out.println(tittaEfterVinst() + "har vunnit");
 				break;
 			}
@@ -67,7 +67,7 @@ public class MainClass {
 		playerTurn++;
 		if((playerTurn) == player.size())
 			playerTurn = 0;
-		return player.get(playerTurn + 1).makeMove();
+		return player.get(playerTurn).makeMove();
 	}
 	
 	private Player lookForProfit(){
