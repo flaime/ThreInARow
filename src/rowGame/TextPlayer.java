@@ -31,7 +31,7 @@ public class TextPlayer extends Player {
 				System.out.println("The X nuber is only aloved to be in betewn 0 and " + gp.getWhite());
 			}
 			
-			x = readInt("") - 1;
+			x = readInt("") ;//- 1;
 			vriteHelptext = true;
 		}while((x <= 0 ) || (x >= gp.getWhite())); 
 		return x;
@@ -46,7 +46,7 @@ public class TextPlayer extends Player {
 				System.out.println("The Y nuber is only aloved to be in betewn 0 and " + gp.getHeight());
 			}
 			
-			x = readInt("") - 1;
+			x = readInt("");// - 1;
 			vriteHelptext = true;
 		}while((x <= 0 ) || (x >= gp.getHeight())); 
 		return x;
