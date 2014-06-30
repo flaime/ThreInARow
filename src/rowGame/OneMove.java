@@ -8,6 +8,8 @@ public class OneMove {
 	
 	public OneMove(int y, int x, Player pl) {
 		this.pl = pl;
+		this.x = x;
+		this.y = y;
 	}
 	
 	public int getX(){
