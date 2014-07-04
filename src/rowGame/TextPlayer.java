@@ -33,7 +33,7 @@ public class TextPlayer extends Player {
 			
 			x = readInt("") ;//- 1;
 			vriteHelptext = true;
-		}while((x <= 0 ) || (x >= gp.getWhite())); 
+		}while((x <= 0 ) || (x >= (gp.getWhite() +1 ))); 
 		return x;
 	}
 	
@@ -48,7 +48,7 @@ public class TextPlayer extends Player {
 			
 			x = readInt("");// - 1;
 			vriteHelptext = true;
-		}while((x <= 0 ) || (x >= gp.getHeight())); 
+		}while((x <= 0 ) || (x >= (gp.getHeight()+1))); 
 		return x;
 	}
 	
