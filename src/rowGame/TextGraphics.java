@@ -18,20 +18,18 @@ public class TextGraphics extends Graphics {
 		//if (sp.equals(spTillfälig) == false) {
 		String print = "";
 
-		for (int i = 0; i < gp.getHeight(); i++) {
-			for (int j = 0; j < gp.getWhite(); j++) {
+		for (int y = gp.getHeight() - 1; y >= 0; y--) {
+			for (int x = 0; x < gp.getWhite(); x++) {
 				
 				print = print + "[";
 				
-				if (gp.getPosition(i, j) != null)
-					print = print + gp.getPosition(i, j).toString();//.toString();//x:y
+				if (gp.getPosition(x, y) != null)
+					print = print + gp.getPosition(x, y).toString();//.toString();//x:y
 				else{
 					if(helpCoordinates == false)
 						print = print + " ";
 					else
-						print = print + (++j) + ":"+ (++i);
-					--i;
-					--j;
+						print = print + (x +1) + ":"+ (y + 1); //(x,y)
 				}
 				//System.out.println(spTillfälig.getPlatts(i, j));
 				print = print + "]";
