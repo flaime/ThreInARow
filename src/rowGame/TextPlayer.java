@@ -15,9 +15,9 @@ public class TextPlayer extends Player {
 	public OneMove makeMove() {
 		
 		System.out.println("Player " + name + " turn");
-		int x = readX("enter the x coordinate:");
+		int x = readX("enter the x coordinate:") - 1;
 		
-		int y = readY("enter the y coordinate:");
+		int y = readY("enter the y coordinate:") - 1;
 		
 		return new OneMove(y, x, this);
 	}
