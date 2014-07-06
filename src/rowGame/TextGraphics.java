@@ -44,4 +44,12 @@ public class TextGraphics extends Graphics {
 		
 	}
 
+	@Override
+	public void profit(Player pl) {
+		System.out.println("---  ---  ---  ---");
+		System.out.println(pl.name + " hav won!       (" + pl.getTecken() + ")" );
+		System.out.println("---  ---  ---  ---");
+		
+	}
+
 }
