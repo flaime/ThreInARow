@@ -50,7 +50,7 @@ public class MainClass {
 			//Lock for vinst
 			if(lookForProfit() != null){
 				//do something
-				//System.out.println(tittaEfterVinst() + "har vunnit");
+				gr.profit(lookForProfit());
 				break;
 			}
 		}
@@ -66,7 +66,7 @@ public class MainClass {
 	}
 	
 	private Player lookForProfit(){
-		return null;
+		return player.get(0);
 		//do somthing her
 	}
 	
