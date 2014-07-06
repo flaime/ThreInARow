@@ -8,5 +8,7 @@ public abstract class Graphics {
 	}
 	
 	public abstract void updateGraphics();
+
+	public abstract void profit(Player lookForProfit);
 	
 }
