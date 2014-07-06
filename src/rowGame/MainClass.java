@@ -33,6 +33,10 @@ public class MainClass {
 		while(true){
 			//a lop to get the game going
 			
+			if(gr != null){
+				gr.updateGraphics();
+			}
+			
 			//add controll to not be abel to lay on a alredy layd plase
 			
 			gp.setPosition(PlayPlayer());
@@ -41,9 +45,7 @@ public class MainClass {
 			//and do somting if the players mov isent is ok
 			
 			//Uppdatete grapichs
-			if(gr != null){
-				gr.updateGraphics();
-			}
+			
 			
 			//Lock for vinst
 			if(lookForProfit() != null){
