@@ -31,16 +31,11 @@ public class TextGraphics extends Graphics {
 					else
 						print = print + (x +1) + ":"+ (y + 1); //(x,y)
 				}
-				//System.out.println(spTillfälig.getPlatts(i, j));
 				print = print + "]";
 			}
 			print = print + "\n";
 		}
 		System.out.println(print);
-	//}
-	
-
-	//spTillfälig = sp;
 		
 	}
 
