@@ -47,6 +47,7 @@ public class TestaMetoder {
 			// vara 3 eller 4 osv
 			if (isTheSame(tempList) == true) {
 				numberTheSame = true;
+				
 				break;
 			}
 
@@ -54,6 +55,34 @@ public class TestaMetoder {
 		return numberTheSame;
 
 	}
+	
+	private static Player isTheSameReturnPlayer(ArrayList<Player> list, int xInARow) {
+
+		boolean numberTheSame = false;
+
+		for (int k = 0; k < list.size() - xInARow + 1; k++) {
+
+			ArrayList<Player> tempList = new ArrayList<>();
+
+			System.out.println("----");
+			for (int i = 0; i < xInARow; i++) {
+				tempList.add(list.get(i + k));
+
+				System.out.println(list.get(i + k));
+			}
+
+			// läg till något för att göra längden på listan rätt om det ska
+			// vara 3 eller 4 osv
+			if (isTheSame(tempList) == true) {
+				numberTheSame = true;
+				return tempList.get(0);
+			}
+
+		}
+		return null;
+
+	}
+
 
 	private static boolean isTheSame(ArrayList<Player> list) {
 		for (int i = 0; i < list.size(); i++) {
