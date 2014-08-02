@@ -112,6 +112,36 @@ public class MainClass {
 		return true;
 
 	}
+	
+	private boolean isTheSame(ArrayList<Player> list, int xInARow) {
+		if(list.size() >= xInARow){
+			
+		}
+		
+		boolean numberTheSame = false;
+		for (int k = 0; k < list.size() - xInARow;k++){
+			
+			ArrayList<Player> tempList = new ArrayList<>();
+			
+			
+			for (int i = 0; i < xInARow; i++) {
+				tempList.add(list.get(i+k));
+			}	
+			
+			for (int i = 0; i < tempList.size(); i++) {
+				for (int j = 0; j < tempList.size(); j++) {
+					if (tempList.get(j) == tempList.get(i)) {
+						numberTheSame = true;
+					} else if (tempList.get(i) != null) {
+						numberTheSame = true;
+					}
+				}
+
+		}
+		}
+		return numberTheSame;
+
+	}
 
 	private void EndGame() {
 
