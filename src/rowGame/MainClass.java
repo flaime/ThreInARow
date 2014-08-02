@@ -75,8 +75,8 @@ public class MainClass {
 			for (int x = 0; x < gp.getWhite(); x++) {
 				tempPlayerX.add(gp.getPosition(x, y));
 			}
-			if (isTheSame(tempPlayerX, gp.GetQuantityOfNumbersInARowToWin()) == true)
-				p = isTheSameReturnPlayer(tempPlayerX, gp.GetQuantityOfNumbersInARowToWin());
+			
+			p = isTheSameReturnPlayer(tempPlayerX, gp.GetQuantityOfNumbersInARowToWin());
 
 		}
 		// lodräta vinster
@@ -87,8 +87,8 @@ public class MainClass {
 			for (int y = 0; y < gp.getHeight(); y++) {
 				tempPlayerY.add(gp.getPosition(x, y));
 			}
-			if (isTheSame(tempPlayerY, gp.GetQuantityOfNumbersInARowToWin()) == true)
-				p = isTheSameReturnPlayer(tempPlayerY, gp.GetQuantityOfNumbersInARowToWin());
+			
+			p = isTheSameReturnPlayer(tempPlayerY, gp.GetQuantityOfNumbersInARowToWin());
 
 		}
 		// tvära vinster
