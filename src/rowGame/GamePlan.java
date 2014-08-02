@@ -17,6 +17,8 @@ public class GamePlan {
 	private int height = 0;
 	private int width = 0;
 	
+	//private int 
+	
 	public GamePlan(int height, int width) {
 		this.width = width;
 		this.height = height;
