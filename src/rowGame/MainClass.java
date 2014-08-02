@@ -96,6 +96,18 @@ public class MainClass {
 		}
 		// tvära vinster
 		
+		//alla snett till höger med början på de som går från kanten
+		
+		ArrayList<Player> tempPlayer = new ArrayList<>();
+		for (int y = 0; y < gp.getHeight(); y++) {
+			for (int x = 0; x < gp.getWhite(); x++) {
+				tempPlayer.add(gp.getPosition(x, y));
+			}
+		}
+		Player possibleWinner = isTheSameReturnPlayer(tempPlayer, gp.GetQuantityOfNumbersInARowToWin());
+		if(possibleWinner != null)
+			p = possibleWinner;
+		
 		
 		return p;
 		// do somthing her
@@ -116,7 +128,7 @@ public class MainClass {
 
 	}
 	
-	private static Player isTheSameReturnPlayer(ArrayList<Player> list, int xInARow) {
+	private Player isTheSameReturnPlayer(ArrayList<Player> list, int xInARow) {
 
 		boolean numberTheSame = false;
 
