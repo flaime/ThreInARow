@@ -99,10 +99,12 @@ public class MainClass {
 		//alla snett till höger med början på de som går från kanten
 		
 		ArrayList<Player> tempPlayer = new ArrayList<>();
-		for (int y = 0; y < gp.getHeight(); y++) {
-			for (int x = 0; x < gp.getWhite(); x++) {
+		int x = 0;
+		for (int y = 0; y < gp.getHeight() || x < gp.getWhite(); y++) {
 				tempPlayer.add(gp.getPosition(x, y));
-			}
+				
+				x++;
+			
 		}
 		Player possibleWinner = isTheSameReturnPlayer(tempPlayer, gp.GetQuantityOfNumbersInARowToWin());
 		if(possibleWinner != null)
@@ -136,11 +138,9 @@ public class MainClass {
 
 			ArrayList<Player> tempList = new ArrayList<>();
 
-			System.out.println("----");
 			for (int i = 0; i < xInARow; i++) {
 				tempList.add(list.get(i + k));
 
-				System.out.println(list.get(i + k));
 			}
 
 			// läg till något för att göra längden på listan rätt om det ska
@@ -163,11 +163,9 @@ public class MainClass {
 
 			ArrayList<Player> tempList = new ArrayList<>();
 
-			System.out.println("----");
 			for (int i = 0; i < xInARow; i++) {
 				tempList.add(list.get(i + k));
 
-				System.out.println(list.get(i + k));
 			}
 
 			if (isTheSame(tempList) == true) {
