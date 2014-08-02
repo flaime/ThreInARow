@@ -88,7 +88,7 @@ public class MainClass {
 				tempPlayerY.add(gp.getPosition(x, y));
 			}
 			if (isTheSame(tempPlayerY, gp.GetQuantityOfNumbersInARowToWin()) == true)
-				p = isTheSameReturnPlayer(tempPlayerX, gp.GetQuantityOfNumbersInARowToWin());
+				p = isTheSameReturnPlayer(tempPlayerY, gp.GetQuantityOfNumbersInARowToWin());
 
 		}
 		// tvära vinster
