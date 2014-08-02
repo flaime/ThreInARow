@@ -75,8 +75,8 @@ public class MainClass {
 			for (int x = 0; x < gp.getWhite(); x++) {
 				tempPlayerX.add(gp.getPosition(x, y));
 			}
-			if (isTheSame(tempPlayerX) == true)
-				p = tempPlayerX.get(0);
+			if (isTheSame(tempPlayerX, gp.GetQuantityOfNumbersInARowToWin()) == true)
+				p = isTheSameReturnPlayer(tempPlayerX, gp.GetQuantityOfNumbersInARowToWin());
 
 		}
 		// lodräta vinster
@@ -87,8 +87,8 @@ public class MainClass {
 			for (int y = 0; y < gp.getHeight(); y++) {
 				tempPlayerY.add(gp.getPosition(x, y));
 			}
-			if (isTheSame(tempPlayerY) == true)
-				p = tempPlayerY.get(0);
+			if (isTheSame(tempPlayerY, gp.GetQuantityOfNumbersInARowToWin()) == true)
+				p = isTheSameReturnPlayer(tempPlayerX, gp.GetQuantityOfNumbersInARowToWin());
 
 		}
 		// tvära vinster
@@ -110,6 +110,33 @@ public class MainClass {
 
 		}
 		return true;
+
+	}
+	
+	private static Player isTheSameReturnPlayer(ArrayList<Player> list, int xInARow) {
+
+		boolean numberTheSame = false;
+
+		for (int k = 0; k < list.size() - xInARow + 1; k++) {
+
+			ArrayList<Player> tempList = new ArrayList<>();
+
+			System.out.println("----");
+			for (int i = 0; i < xInARow; i++) {
+				tempList.add(list.get(i + k));
+
+				System.out.println(list.get(i + k));
+			}
+
+			// läg till något för att göra längden på listan rätt om det ska
+			// vara 3 eller 4 osv
+			if (isTheSame(tempList) == true) {
+				numberTheSame = true;
+				return tempList.get(0);
+			}
+
+		}
+		return null;
 
 	}
 	
