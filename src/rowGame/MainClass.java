@@ -100,7 +100,7 @@ public class MainClass {
 		
 		ArrayList<Player> tempPlayer = new ArrayList<>();
 		int x = 0;
-		for (int y = 0; y < gp.getHeight() || x < gp.getWhite(); y++) {
+		for (int y = 0; y < gp.getHeight() /* || x < gp.getWhite()  tror inte jag behöver denna delen*/; y++) {
 				tempPlayer.add(gp.getPosition(x, y));
 				
 				x++;
