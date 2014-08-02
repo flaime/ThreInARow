@@ -17,13 +17,48 @@ public class GamePlan {
 	private int height = 0;
 	private int width = 0;
 	
-	//private int 
+	private int QuantityOfNumbersInARowToWin = 0;
 	
 	public GamePlan(int height, int width) {
 		this.width = width;
 		this.height = height;
+		
+		if(width >= height)
+			QuantityOfNumbersInARowToWin  = width;
+		else
+			QuantityOfNumbersInARowToWin = height;
+		
 		gamePlan = new Player[width][height];
 	}
+	
+	public GamePlan(int height, int width, int QuantityOfNumbersInARowToWin) {
+		this.width = width;
+		this.height = height;
+		
+		if(QuantityOfNumbersInARowToWin <= height && QuantityOfNumbersInARowToWin <= width){
+			this.QuantityOfNumbersInARowToWin = QuantityOfNumbersInARowToWin;
+		}else{
+			if(width >= height)
+				QuantityOfNumbersInARowToWin  = width;
+			else
+				QuantityOfNumbersInARowToWin = height;
+		}
+		
+		gamePlan = new Player[width][height];
+	}
+	
+	public boolean SetQuantityOfNumbersInARowToWin(int QuantityOfNumbersInARowToWin){
+		if(QuantityOfNumbersInARowToWin <= height && QuantityOfNumbersInARowToWin <= width){
+			this.QuantityOfNumbersInARowToWin = QuantityOfNumbersInARowToWin;
+			return true;
+		}
+		return false;
+	}
+	
+	public int GetQuantityOfNumbersInARowToWin(){
+		return QuantityOfNumbersInARowToWin;
+	}
+	
 
 	public int getWhite() {
 		return width;
