@@ -69,7 +69,7 @@ public class MainClass {
 	private Player lookForProfit() {
 		Player p = null;
 
-		// vågräta vinster
+		// horizontal gains
 		for (int y = 0; y < gp.getHeight(); y++) {
 
 			ArrayList<Player> tempPlayerX = new ArrayList<>();
@@ -82,7 +82,7 @@ public class MainClass {
 				p = possibleWinner;
 
 		}
-		// lodräta vinster
+		// horizontal gains
 
 		for (int x = 0; x < gp.getWhite(); x++) {
 
@@ -95,7 +95,6 @@ public class MainClass {
 			if(possibleWinner != null)
 				p = possibleWinner;
 		}
-		// tvära vinster
 		 
 		//non horizontal or vertical profits
 		
@@ -103,7 +102,7 @@ public class MainClass {
 			
 			ArrayList<Player> tempPlayer = new ArrayList<>();
 			int x = i;
-			for (int y = 0; y < gp.getHeight() && x < gp.getWhite() ; y++) { //= = t
+			for (int y = 0; y < gp.getHeight() && x < gp.getWhite() ; y++) {
 					tempPlayer.add(gp.getPosition(x, y));
 					
 					x++;
@@ -136,8 +135,7 @@ for (int i = gp.getWhite()-1; i >= 0; i--) {
 			
 			ArrayList<Player> tempPlayer = new ArrayList<>();
 			int x = i;
-			for (int y = 0; y < gp.getHeight() && x >= 0 ; y++) { //= = t  // x >= 0  becoms < gp.getWhite()
-//				System.out.println("X = " + x + " Y = " + y);
+			for (int y = 0; y < gp.getHeight() && x >= 0 ; y++) { 
 					tempPlayer.add(gp.getPosition(x, y));
 					
 					x--;
@@ -147,14 +145,14 @@ for (int i = gp.getWhite()-1; i >= 0; i--) {
 			if(possibleWinner != null)
 				p = possibleWinner;
 			
-		} //denna går och tar samma vinekl fast från ett anatt håll börjar den(börjar i andra änden)
+		} //this goes and takes the same angle but from a different direction starts (starts at the other end)
 
 		for (int t = 0; t < gp.getHeight()-1 ; t++) {
 			
 			ArrayList<Player> tempPlayer = new ArrayList<>();
-			int x = gp.getWhite() -1; // 0 = i
+			int x = gp.getWhite() -1;
 			
-			for (int y = t; y < gp.getHeight() && x >= 0 ; y++) { //y < gp.getHeight() cange to 
+			for (int y = t; y < gp.getHeight() && x >= 0 ; y++) { 
 					tempPlayer.add(gp.getPosition(x, y));
 					
 					x--;
@@ -208,7 +206,6 @@ for (int i = gp.getWhite()-1; i >= 0; i--) {
 
 		}
 		return null;
-
 	}
 	
 	private boolean isTheSame(ArrayList<Player> list, int xInARow) {
