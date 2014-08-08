@@ -1,6 +1,7 @@
 package rowGame;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class MainClass {
@@ -19,7 +20,7 @@ public class MainClass {
 	}
 
 	private void StartGame() {
-		gp = new GamePlan(3, 3);
+		gp = new GamePlan(3, 3, 2); //cange back to (3, 3) or (3,3,3)
 		player.add(new TextPlayer("palyer 1", gp));
 		player.add(new TextPlayer("palyer 2", gp));
 		gr = new TextGraphics(gp);
@@ -95,25 +96,80 @@ public class MainClass {
 				p = possibleWinner;
 		}
 		// tvära vinster
+		 
+		//non horizontal or vertical profits
 		
-		//alla snett till höger med början på de som går från kanten
-		
-		ArrayList<Player> tempPlayer = new ArrayList<>();
-		int x = 0;
-		for (int y = 0; y < gp.getHeight() /* || x < gp.getWhite()  tror inte jag behöver denna delen*/; y++) {
-				tempPlayer.add(gp.getPosition(x, y));
+		for (int i = 0; i < gp.getWhite()-1; i++) {
+			
+			ArrayList<Player> tempPlayer = new ArrayList<>();
+			int x = i;
+			for (int y = 0; y < gp.getHeight() && x < gp.getWhite() ; y++) { //= = t
+					tempPlayer.add(gp.getPosition(x, y));
+					
+					x++;
 				
-				x++;
+			}
+			Player possibleWinner = isTheSameReturnPlayer(tempPlayer, gp.GetQuantityOfNumbersInARowToWin());
+			if(possibleWinner != null)
+				p = possibleWinner;
 			
 		}
-		Player possibleWinner = isTheSameReturnPlayer(tempPlayer, gp.GetQuantityOfNumbersInARowToWin());
-		if(possibleWinner != null)
-			p = possibleWinner;
+		for (int t = 0; t < gp.getHeight()-1; t++) {
+			
+			ArrayList<Player> tempPlayer = new ArrayList<>();
+			int x = 0; 
+			
+			for (int y = t; y < gp.getHeight() && x < gp.getWhite() ; y++) {
+					tempPlayer.add(gp.getPosition(x, y));
+					
+					x++;
+				
+			}
+			Player possibleWinner = isTheSameReturnPlayer(tempPlayer, gp.GetQuantityOfNumbersInARowToWin());
+			if(possibleWinner != null)
+				p = possibleWinner;
+		}
 		
+		//and the other way sloping profits (non horizontal or vertical profits)
+		
+for (int i = gp.getWhite()-1; i >= 0; i--) {
+			
+			ArrayList<Player> tempPlayer = new ArrayList<>();
+			int x = i;
+			for (int y = 0; y < gp.getHeight() && x >= 0 ; y++) { //= = t  // x >= 0  becoms < gp.getWhite()
+//				System.out.println("X = " + x + " Y = " + y);
+					tempPlayer.add(gp.getPosition(x, y));
+					
+					x--;
+				
+			}
+			Player possibleWinner = isTheSameReturnPlayer(tempPlayer, gp.GetQuantityOfNumbersInARowToWin());
+			if(possibleWinner != null)
+				p = possibleWinner;
+			
+		} //denna går och tar samma vinekl fast från ett anatt håll börjar den(börjar i andra änden)
+
+		for (int t = 0; t < gp.getHeight()-1 ; t++) {
+			
+			ArrayList<Player> tempPlayer = new ArrayList<>();
+			int x = gp.getWhite() -1; // 0 = i
+			
+			for (int y = t; y < gp.getHeight() && x >= 0 ; y++) { //y < gp.getHeight() cange to 
+					tempPlayer.add(gp.getPosition(x, y));
+					
+					x--;
+				
+			}
+			Player possibleWinner = isTheSameReturnPlayer(tempPlayer, gp.GetQuantityOfNumbersInARowToWin());
+			if(possibleWinner != null)
+				p = possibleWinner;
+		}
 		
 		return p;
 		// do somthing her
 	}
+	
+
 
 	private boolean isTheSame(ArrayList<Player> list) {
 		for (int i = 0; i < list.size(); i++) {
