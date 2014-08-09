@@ -55,6 +55,18 @@ public class GamePlan {
 		return false;
 	}
 	
+	public String identifier(){
+		String returnString = "";
+		
+		for (int y = 0; y < width; y++) {
+			for (int x = 0; x < width; x++) {
+				if(gamePlan[x][y] != null)
+					returnString = returnString + x +y;
+			}
+		}
+		return returnString;
+	}
+	
 	public int GetQuantityOfNumbersInARowToWin(){
 		return QuantityOfNumbersInARowToWin;
 	}
