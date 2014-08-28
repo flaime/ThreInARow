@@ -31,4 +31,9 @@ public abstract class Player {
 	}
 	
 	public abstract OneMove makeMove();
+
+	public void profit(Player p) {
+		// TODO Auto-generated method stub
+		
+	}
 }

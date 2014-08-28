@@ -51,10 +51,17 @@ public class MainClass {
 			if (vinner != null) {
 				gr.updateGraphics();
 				gr.profit(vinner);
-				break;
+				tellPlayerForProfit(vinner);
+				//break;
 			}
 		}
 
+	}
+	
+	private void tellPlayerForProfit(Player p){
+		for (int i = 0; i < player.size(); i++) {
+			player.get(i).profit(p);
+		}
 	}
 
 	int playerTurn = -1;
