@@ -23,7 +23,8 @@ public class MainClass {
 		gp = new GamePlan(3, 3, 2); // cange back to (3, 3) or (3,3,3)
 		player.add(new TextPlayer("palyer 1", gp));
 		player.add(new TextPlayer("palyer 2", gp));
-		gr = new TextGraphics(gp);
+		//gr = new TextGraphics(gp);
+		gr = new UIGraphics(gp);
 	}
 
 	private void StartLope() {
